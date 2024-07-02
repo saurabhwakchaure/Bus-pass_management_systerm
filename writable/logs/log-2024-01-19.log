@@ -1,0 +1,117 @@
+CRITICAL - 2024-01-19 09:26:57 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->initialize()
+ERROR - 2024-01-19 17:17:11 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in C:\xampp\htdocs\bus_pass_management\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\bus_pass_management\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\htdocs\bus_pass_management\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\bus_pass_management\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\bus_pass_management\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\bus_pass_management\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in C:\xampp\htdocs\bus_pass_management\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\bus_pass_management\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\bus_pass_management\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\bus_pass_management\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\bus_pass_management\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-19 17:20:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRIMARY KEY) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`student_name` VARCHAR(100) NOT ' at line 2 in C:\xampp\htdocs\bus_pass_management\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\bus_pass_management\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `S...', 0)
+#1 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `S...')
+#2 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `S...')
+#3 C:\xampp\htdocs\bus_pass_management\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `S...')
+#4 C:\xampp\htdocs\bus_pass_management\app\Database\Migrations\2024-01-19-171026_Bus.php(25): CodeIgniter\Database\Forge->createTable('Student')
+#5 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(865): App\Database\Migrations\Student->up()
+#6 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\bus_pass_management\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\bus_pass_management\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\bus_pass_management\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\bus_pass_management\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-19 17:27:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRIMARY KEY) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`student_name` VARCHAR(100) NOT ' at line 2 in C:\xampp\htdocs\bus_pass_management\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\bus_pass_management\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `S...', 0)
+#1 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `S...')
+#2 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `S...')
+#3 C:\xampp\htdocs\bus_pass_management\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `S...')
+#4 C:\xampp\htdocs\bus_pass_management\app\Database\Migrations\2024-01-19-171026_Bus.php(25): CodeIgniter\Database\Forge->createTable('Student')
+#5 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(865): App\Database\Migrations\Student->up()
+#6 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\bus_pass_management\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\bus_pass_management\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\bus_pass_management\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\bus_pass_management\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-19 17:27:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'PRIMARY KEY) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`student_name` VARCHAR(100) NOT ' at line 2 in C:\xampp\htdocs\bus_pass_management\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\bus_pass_management\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `S...', 0)
+#1 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `S...')
+#2 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `S...')
+#3 C:\xampp\htdocs\bus_pass_management\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `S...')
+#4 C:\xampp\htdocs\bus_pass_management\app\Database\Migrations\2024-01-19-171026_Bus.php(25): CodeIgniter\Database\Forge->createTable('Student', true)
+#5 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(865): App\Database\Migrations\Student->up()
+#6 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\bus_pass_management\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\bus_pass_management\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\bus_pass_management\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\bus_pass_management\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-19 17:50:11 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\xampp\htdocs\bus_pass_management\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\bus_pass_management\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\bus_pass_management\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\bus_pass_management\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\bus_pass_management\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-19 17:50:43 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\xampp\htdocs\bus_pass_management\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\bus_pass_management\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\bus_pass_management\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\bus_pass_management\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\bus_pass_management\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-19 17:54:44 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\xampp\htdocs\bus_pass_management\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\htdocs\bus_pass_management\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\htdocs\bus_pass_management\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\htdocs\bus_pass_management\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\htdocs\bus_pass_management\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\htdocs\bus_pass_management\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}

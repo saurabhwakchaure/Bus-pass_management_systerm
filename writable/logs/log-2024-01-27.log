@@ -1,0 +1,100 @@
+CRITICAL - 2024-01-27 13:32:03 --> ErrorException: Undefined variable $detail
+in APPPATH\views\about.php on line 124.
+ 1 APPPATH\views\about.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail', 'C:\\xampp\\htdocs\\bus_pass_management\\app\\views\\about.php', 124)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bus_pass_management\\app\\views\\about.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('about', [], true)
+ 5 APPPATH\Controllers\AboutController.php(12): view('about')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AboutController->About()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AboutController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\bus_pass_management\\public\\index.php')
+CRITICAL - 2024-01-27 16:13:01 --> ArgumentCountError: Too few arguments to function App\Controllers\PassController::deletePass(), 0 passed in C:\xampp\htdocs\bus_pass_management\system\CodeIgniter.php on line 941 and exactly 1 expected
+in APPPATH\Controllers\PassController.php on line 139.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PassController->deletePass()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PassController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\bus_pass_management\\public\\index.php')
+ERROR - 2024-01-27 16:43:04 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type bigint: &quot;first_name&quot;
+LINE 3: WHERE &quot;reservation&quot;.&quot;id&quot; = 'first_name'
+                                   ^ in C:\xampp\htdocs\bus_pass_management\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\bus_pass_management\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *\nFROM "...')
+#2 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 C:\xampp\htdocs\bus_pass_management\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 C:\xampp\htdocs\bus_pass_management\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 C:\xampp\htdocs\bus_pass_management\system\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\bus_pass_management\system\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'first_name')
+#7 C:\xampp\htdocs\bus_pass_management\app\Controllers\BookingController.php(164): CodeIgniter\BaseModel->find('first_name')
+#8 C:\xampp\htdocs\bus_pass_management\system\CodeIgniter.php(941): App\Controllers\BookingController->insertransactionTicket()
+#9 C:\xampp\htdocs\bus_pass_management\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+#10 C:\xampp\htdocs\bus_pass_management\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\bus_pass_management\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\bus_pass_management\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-01-27 16:43:04 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type bigint: &quot;first_name&quot;
+LINE 3: WHERE &quot;reservation&quot;.&quot;id&quot; = 'first_name'
+                                   ^
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "reservation"
+WHERE "reservation"."id" = :reservation.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'first_name')
+ 4 APPPATH\Controllers\BookingController.php(164): CodeIgniter\BaseModel->find('first_name')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BookingController->insertransactionTicket()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\bus_pass_management\\public\\index.php')
+CRITICAL - 2024-01-27 16:43:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  invalid input syntax for type bigint: &quot;first_name&quot;
+LINE 3: WHERE &quot;reservation&quot;.&quot;id&quot; = 'first_name'
+                                   ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 192.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "reservation"
+WHERE "reservation"."id" = \'first_name\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "reservation"
+WHERE "reservation"."id" = \'first_name\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "reservation"
+WHERE "reservation"."id" = :reservation.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'first_name')
+ 6 APPPATH\Controllers\BookingController.php(164): CodeIgniter\BaseModel->find('first_name')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BookingController->insertransactionTicket()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\bus_pass_management\\public\\index.php')
+CRITICAL - 2024-01-27 16:43:04 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type bigint: &quot;first_name&quot;
+LINE 3: WHERE &quot;reservation&quot;.&quot;id&quot; = 'first_name'
+                                   ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 187.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type bigint: &quot;first_name&quot;
+LINE 3: WHERE &quot;reservation&quot;.&quot;id&quot; = \'first_name\'
+                                   ^', 'C:\\xampp\\htdocs\\bus_pass_management\\system\\Database\\Postgre\\Connection.php', 187)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'SELECT *
+FROM "reservation"
+WHERE "reservation"."id" = \'first_name\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "reservation"
+WHERE "reservation"."id" = \'first_name\'')
+ 4 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "reservation"
+WHERE "reservation"."id" = \'first_name\'')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "reservation"
+WHERE "reservation"."id" = :reservation.id:', [...], false)
+ 6 SYSTEMPATH\Model.php(199): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(true, 'first_name')
+ 8 APPPATH\Controllers\BookingController.php(164): CodeIgniter\BaseModel->find('first_name')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BookingController->insertransactionTicket()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\bus_pass_management\\public\\index.php')

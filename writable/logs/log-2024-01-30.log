@@ -1,0 +1,12 @@
+CRITICAL - 2024-01-30 03:38:55 --> ErrorException: Undefined variable $detail
+in APPPATH\views\fareform.php on line 124.
+ 1 APPPATH\views\fareform.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $detail', 'C:\\xampp\\htdocs\\bus_pass_management\\app\\views\\fareform.php', 124)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\bus_pass_management\\app\\views\\fareform.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('fareform', [], true)
+ 5 APPPATH\Controllers\ServerController.php(17): view('fareform')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ServerController->fareform()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ServerController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\bus_pass_management\\public\\index.php')
